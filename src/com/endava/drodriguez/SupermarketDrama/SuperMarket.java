@@ -28,8 +28,8 @@ class SuperMarket {
     }
 
     private int getSumFromPositions(int[] positions){
-
         int sum = 0;
+
         for (int i = 0; i < positions.length; i++)
             if(positions[i] == 1) sum += this.shoppingListSize.get(i + 1);
 

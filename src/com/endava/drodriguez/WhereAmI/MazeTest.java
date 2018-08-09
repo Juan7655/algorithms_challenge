@@ -8,108 +8,108 @@ public class MazeTest {
 
     @Test
     public void getPath() {
-        Boolean[][] maze = new Boolean[3][3];
+        int[][] maze = new int[3][3];
 
-        maze[0] = new Boolean[]{false, true, false};
-        maze[1] = new Boolean[]{false, true, false};
-        maze[2] = new Boolean[]{false, false, false};
+        maze[0] = new int[]{0, 1, 0};
+        maze[1] = new int[]{0, 1, 0};
+        maze[2] = new int[]{0, 0, 0};
 
         Maze m = new Maze(maze, new int[]{0, 0}, new int[]{0, 2});
 
-        Boolean[][] expected = new Boolean[3][3];
+        int[][] expected = new int[3][3];
 
-        expected[0] = new Boolean[]{true, false, true};
-        expected[1] = new Boolean[]{true, false, true};
-        expected[2] = new Boolean[]{true, true, true};
+        expected[0] = new int[]{1, 0, 1};
+        expected[1] = new int[]{1, 0, 1};
+        expected[2] = new int[]{1, 1, 1};
 
         assertArrayEquals(expected, m.getPath());
     }
     @Test
     public void getPath2() {
-        Boolean[][] maze = new Boolean[4][4];
+        int[][] maze = new int[4][4];
 
-        maze[0] = new Boolean[]{false, true, true, false};
-        maze[1] = new Boolean[]{false, false, true, false};
-        maze[2] = new Boolean[]{true, false, false, false};
-        maze[3] = new Boolean[]{true, true, false, true};
+        maze[0] = new int[]{0, 1, 1, 0};
+        maze[1] = new int[]{0, 0, 1, 0};
+        maze[2] = new int[]{1, 0, 0, 0};
+        maze[3] = new int[]{1, 1, 0, 1};
 
-        Maze m = new Maze(maze, new int[]{0, 0}, new int[]{0, 2});
+        Maze m = new Maze(maze, new int[]{0, 0}, new int[]{0, 3});
 
-        Boolean[][] expected = new Boolean[4][4];
+        int[][] expected = new int[4][4];
 
-        expected[0] = new Boolean[]{true, false, false, true};
-        expected[1] = new Boolean[]{true, true, false, true};
-        expected[2] = new Boolean[]{false, true, true, true};
-        expected[3] = new Boolean[]{false, false, false, false};
+        expected[0] = new int[]{1, 0, 0, 1};
+        expected[1] = new int[]{1, 1, 0, 1};
+        expected[2] = new int[]{0, 1, 1, 1};
+        expected[3] = new int[]{0, 0, 0, 0};
 
         assertArrayEquals(expected, m.getPath());
     }
     @Test
     public void getPath3() {
-        Boolean[][] maze = new Boolean[4][4];
+        int[][] maze = new int[4][4];
 
-        maze[0] = new Boolean[]{false, true, true, false};
-        maze[1] = new Boolean[]{false, false, false, false};
-        maze[2] = new Boolean[]{true, false, true, true};
-        maze[3] = new Boolean[]{true, true, false, true};
+        maze[0] = new int[]{0, 1, 1, 0};
+        maze[1] = new int[]{0, 0, 0, 0};
+        maze[2] = new int[]{1, 0, 1, 1};
+        maze[3] = new int[]{1, 1, 0, 1};
 
-        Maze m = new Maze(maze, new int[]{0, 0}, new int[]{0, 2});
+        Maze m = new Maze(maze, new int[]{0, 0}, new int[]{0, 3});
 
-        Boolean[][] expected = new Boolean[4][4];
+        int[][] expected = new int[4][4];
 
-        expected[0] = new Boolean[]{true, false, false, true};
-        expected[1] = new Boolean[]{true, true, true, true};
-        expected[2] = new Boolean[]{false, false, false, false};
-        expected[3] = new Boolean[]{false, false, false, false};
+        expected[0] = new int[]{1, 0, 0, 1};
+        expected[1] = new int[]{1, 1, 1, 1};
+        expected[2] = new int[]{0, 0, 0, 0};
+        expected[3] = new int[]{0, 0, 0, 0};
 
         assertArrayEquals(expected, m.getPath());
     }
     @Test
     public void getPath4() {
-        Boolean[][] maze = new Boolean[4][4];
+        int[][] maze = new int[4][4];
 
-        maze[0] = new Boolean[]{false, true, true, false};
-        maze[1] = new Boolean[]{false, true, true, false};
-        maze[2] = new Boolean[]{false, false, false, false};
-        maze[3] = new Boolean[]{true, true, true, false};
+        maze[0] = new int[]{0, 1, 1, 0};
+        maze[1] = new int[]{0, 1, 1, 0};
+        maze[2] = new int[]{0, 0, 0, 0};
+        maze[3] = new int[]{1, 1, 1, 0};
 
-        Maze m = new Maze(maze, new int[]{0, 0}, new int[]{0, 2});
+        Maze m = new Maze(maze, new int[]{0, 0}, new int[]{0, 3});
 
-        Boolean[][] expected = new Boolean[4][4];
+        int[][] expected = new int[4][4];
 
-        expected[0] = new Boolean[]{true, false, false, true};
-        expected[1] = new Boolean[]{true, false, false, true};
-        expected[2] = new Boolean[]{true, true, true, true};
-        expected[3] = new Boolean[]{false, false, false, false};
+        expected[0] = new int[]{1, 0, 0, 1};
+        expected[1] = new int[]{1, 0, 0, 1};
+        expected[2] = new int[]{1, 1, 1, 1};
+        expected[3] = new int[]{0, 0, 0, 0};
 
 
         assertArrayEquals(expected, m.getPath());
     }
     @Test
     public void getPath5() {
-        Boolean[][] maze = new Boolean[8][4];
+        int[][] maze = new int[8][4];
 
-        maze[0] = new Boolean[]{false, false, true, true};
-        maze[1] = new Boolean[]{true, false, true, true};
-        maze[2] = new Boolean[]{true, false, false, true};
-        maze[3] = new Boolean[]{true, false, true, true};
-        maze[4] = new Boolean[]{true, false, false, false};
-        maze[5] = new Boolean[]{true, false, true, false};
-        maze[6] = new Boolean[]{true, false, true, false};
-        maze[7] = new Boolean[]{true, false, true, false};
+        maze[0] = new int[]{0, 0, 1, 1};
+        maze[1] = new int[]{1, 0, 1, 1};
+        maze[2] = new int[]{1, 0, 0, 1};
+        maze[3] = new int[]{1, 0, 1, 1};
+        maze[4] = new int[]{1, 0, 0, 0};
+        maze[5] = new int[]{1, 0, 1, 0};
+        maze[6] = new int[]{1, 0, 1, 0};
+        maze[7] = new int[]{1, 0, 1, 0};
 
-        Maze m = new Maze(maze, new int[]{0, 0}, new int[]{0, 2});
+        Maze m = new Maze(maze, new int[]{0, 0}, new int[]{7, 3});
 
-        Boolean[][] expected = new Boolean[8][4];
+        int[][] expected = new int[8][4];
 
-        expected[0] = new Boolean[]{true, true, false, false};
-        expected[1] = new Boolean[]{false, true, false, false};
-        expected[2] = new Boolean[]{false, true, false, false};
-        expected[3] = new Boolean[]{false, true, false, false};
-        expected[4] = new Boolean[]{false, true, true, true};
-        expected[5] = new Boolean[]{false, false, false, true};
-        expected[6] = new Boolean[]{false, false, false, true};
-        expected[7] = new Boolean[]{false, false, false, true};
+        expected[0] = new int[]{1, 1, 0, 0};
+        expected[1] = new int[]{0, 1, 0, 0};
+        expected[2] = new int[]{0, 1, 0, 0};
+        expected[3] = new int[]{0, 1, 0, 0};
+        expected[4] = new int[]{0, 1, 1, 1};
+        expected[5] = new int[]{0, 0, 0, 1};
+        expected[6] = new int[]{0, 0, 0, 1};
+        expected[7] = new int[]{0, 0, 0, 1};
 
         assertArrayEquals(expected, m.getPath());
     }
