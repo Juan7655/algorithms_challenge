@@ -44,7 +44,9 @@ public class SuperMarketTest {
 
         SuperMarket s = new SuperMarket(input, 20);
 
-        assertArrayEquals(new int[]{0,0,1,1,1,0}, s.result());
+        //assertArrayEquals(new int[]{0,0,1,1,1,0}, s.result());
+        assertArrayEquals(new int[]{1,1,1,0,1,0}, s.result());
+
     }
     @Test
     public void result4() {
@@ -69,7 +71,7 @@ public class SuperMarketTest {
 
         SuperMarket s = new SuperMarket(input, 80);
 
-        assertArrayEquals(new int[]{0, 1, 1, 1}, s.result());
+        assertArrayEquals(new int[]{1, 1, 1, 1}, s.result());
     }
     @Test
     public void result6() {
@@ -81,6 +83,6 @@ public class SuperMarketTest {
 
         SuperMarket s = new SuperMarket(input, 8);
 
-        assertArrayEquals(new int[]{0, 0, 1, 0}, s.result());
+        assertArrayEquals(new int[]{1, 0, 0, 1}, s.result());
     }
 }
